@@ -10,35 +10,154 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Karla:wght@400;700&family=Smooch&display=swap');
+  :root 
+  {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --light-cyan: hsl(178,48%,52%);
+  --Font-size: 16px;
+  --font-family: 'Karla', sans-serif;
+
+  }
+
+   *
+   {
+    padding: 0;margin: 0;
+   }
+   
+   body
+   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+   }
+
+
+   
+  main 
+  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px,auto);
+    grid-template-areas: 'header header'
+                         'price whyus';
+    gap: 20px 0px;
+    margin: auto auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+
+  }
+
+  header
+    {
+         grid-area: header;
+         display: grid;
+         gap: 30px;
+    }
+
+    header h1 
+    {
+      font-weight: 700;
+      color: var(--Cyan);
+
+    }
+
+   header h2
+    {
+      font-weight: 700;
+      color: var(--Bright-Yellow);
+
+
+    }
+
+    header p
+    {
+      font-weight: 700;
+      color: var(--Grayish-Blue);
+      font-size: 16px;
+      max-width: 600px;
+      line-height: 25px;
+
+    }
+
+
+  main div.price 
+  {
+    grid-area: price;
+    background: var(--Cyan);
+    min-height: 100%;
+    border-radius: 0px 0px 0px 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  main div.whyus
+  {
+    grid-area: whyus;
+    background: var(--light-cyan);
+    min-height: 100%;
+    border-radius: 0px 0px 15px 0px;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  main div.whyus ul
+  {
+    list-style: none;
+
+   
+  }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  Join our community
 
-  30-day, hassle-free money back guarantee
+  <main>
+      <header>
+        <h1>  Join our community </h1>
+        <h2>  30-day, hassle-free money back guarantee </h2>
+        <p> 
+          Gain access to our full library of tutorials along with expert code reviews. 
+          Perfect for any developers who are serious about honing their skills. 
+        </p>
+      </header>
+        <div class="price">
+           <h3> Monthly Subscription </h3>
+          <p>  &dollar;29  <span>per month</span></p>
+          <p>  Full access for less than &dollar;1 a day</p>
+          <button class="register">   Sign Up </button>
+        </div>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+        <div class="whyus">
+           <h3>  Why Us </h3>
+           <ul>
+             
+               <li>  Tutorials by industry experts </li>
+               <li>  Peer &amp; expert code review </li>
+               <li>  Coding exercises </li>
+               <li>  Access to our GitHub repos </li>
+               <li>  Community forum </li>
+               <li>  Flashcard decks </li>
+               <li>  New videos every week </li>
+           </ul>
+        </div>
+    </main>
 
-  Monthly Subscription
 
-  &dollar;29 per month
 
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+<!--
   
   <footer>
     <p class="attribution">
@@ -46,5 +165,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+-->
+
 </body>
 </html>
