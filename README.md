@@ -19,7 +19,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
 ### Screenshot
 <p align="center">
-<img src=https://user-images.githubusercontent.com/78083890/172053723-b6107759-7876-4d35-b2b4-a6d0c6981fd9.png" width="460" height="400">
+<img src="https://user-images.githubusercontent.com/78083890/172053723-b6107759-7876-4d35-b2b4-a6d0c6981fd9.png" width="460" height="400">
 </p>
 
 
