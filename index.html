@@ -18,6 +18,7 @@
   --Light-Gray: hsl(204, 43%, 93%);
   --Grayish-Blue: hsl(218, 22%, 67%);
   --light-cyan: hsl(178,48%,52%);
+  --white: #fff;
   --Font-size: 16px;
   --font-family: 'Karla', sans-serif;
 
@@ -35,6 +36,7 @@
     align-items: center;
     min-height: 100vh;
     font-family: var(--font-family);
+    background: var(--Light-Gray);
    }
 
 
@@ -51,6 +53,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px;
+    background: var(--white);
 
 
   }
@@ -60,6 +63,7 @@
          grid-area: header;
          display: grid;
          gap: 30px;
+         margin: auto auto;
     }
 
     header h1 
@@ -94,10 +98,51 @@
     background: var(--Cyan);
     min-height: 100%;
     border-radius: 0px 0px 0px 15px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    padding: 30px 30px 0px;
+    color: var(--white);
   } 
+ main div.price p:first-of-type
+ {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+ }
+  main div.price p span 
+  {
+    color: var(--Light-Gray);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+   main div.price p:last-of-type
+ {
+  
+  font-weight: 400;
+  color: var(--Light-Gray);
+  margin-bottom: 30px;
+ }
+
+ main div.price button
+ {
+  background: var(--Bright-Yellow);
+  padding: 15px;
+  text-align: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 25px;
+  box-shadow: 1px 1px 10px var(--Grayish-Blue) ;
+  border: none;
+  min-width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .5s linear;
+ }
+
+ main div.price button:hover
+ {
+  color: var(--Bright-Yellow);
+  background: var(--white);
+ }
 
   main div.whyus
   {
@@ -105,21 +150,95 @@
     background: var(--light-cyan);
     min-height: 100%;
     border-radius: 0px 0px 15px 0px;
-     display: flex;
-     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 30px 30px 0px;
+    color: var(--white);
 
   }
 
   main div.whyus ul
   {
     list-style: none;
+   color: var(--Light-Gray);
+  }
+    main div.whyus ul li
+  {
+margin-bottom: 6px;
+font-size: 16px;
+  }
 
-   
+  div h3 
+  {
+    margin: 20px 0px;
+    font-size: 30px;
   }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+
+  @media(max-width: 775px)
+  {
+    
+    body
+    {
+      padding: 20px 30px;
+    }
+
+      main 
+    
+  {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(300px,auto);
+    grid-template-areas: 'header'
+                         'whyus'
+                         'price';
+    gap: 10px;
+  
+
+
+  }
+  header{
+  padding: 20px 30px;
+  }
+  
+  main div.whyus 
+  {
+    border-radius: 0px;
+  }
+  main div.price 
+  {
+    border-radius: 0px 0px 15px 15px;
+
+  }
+
+  main p 
+  {
+    font-size: 13px;
+  }
+  header h1 
+  {
+    font-size: 23px;
+  }
+
+  header h2 
+  {
+    font-size: 19px;
+  }
+
+  div h3 
+  {
+    font-size: 20px;
+  }
+  main div.whyus ul li 
+  {
+    font-size: 15px;
+  }
+
+  main div.price button 
+  {
+    font-size: 17px;
+  }
+  }
   </style>
 </head>
 <body>
